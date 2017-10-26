@@ -1,0 +1,37 @@
+{% extends 'layouts/index.html' %}
+
+{% block style %}
+	<style type="text/css" media="screen">
+		body{
+			background: url('/static/img/background2.jpg') center center no-repeat scroll;
+		}
+	</style>
+{% endblock %}
+
+{% block content %}
+	<div class="container text-center" style="margin-top: 150px; margin-bottom: 150px;">
+		<div class="col-md-6 col-md-offset-3 box">
+			<h2>Ingresar en GDANCE</h2>
+			{% for message in messages %}
+				<p class="text-{{ message.tags }}">{{ message }}</p>
+			{% endfor %}
+			{% if form.errors %}
+				<p class="text-danger">
+					Error en el ingreso. Por favor póngase en contácto con el Administrador
+				</p>
+			{% endif %}
+			<form role="form" action="{% url 'login' %}" method="POST">
+				{% csrf_token %}
+				<div class="form-group">
+					<input id="id_username" type="text" class="form-control" name="username" value="" placeholder="Usuario" required>
+				</div>
+				<div class="form-group">
+					<input id="id_password" type="password" class="form-control" name="password" placeholder="Contraseña" required>
+				</div>
+				<div class="form-group text-center">
+					<button type="submit" class="btn btn-success">Ingresar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
