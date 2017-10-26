@@ -84,10 +84,10 @@ else:
 	DATABASES = {
 		'default': {
 			'ENGINE': 'django.db.backends.postgresql_psycopg2',
-			'NAME': 'gdance_db',
-			'USER': 'root',
-			'PASSWORD': 'root',
-			'HOST': 'localhost',
+			'NAME': 'dadno1s7u1rbgh',
+			'USER': 'yirngjpwvojqdr',
+			'PASSWORD': 'e10f5d6c3271720457fca5bf397bc9c26c1fc5219e4bceeceb65b432868c0d76',
+			'HOST': 'ec2-174-129-239-0.compute-1.amazonaws.com',
 			'PORT': '5432',
 		}
 	}
